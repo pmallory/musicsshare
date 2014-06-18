@@ -2,8 +2,8 @@
 if [ $# -ne 1 ]
     then
         echo "Bad arguments, correct usage is:"
-        echo "user@host"
-        echo "example: GBurdell@gatech.edu"
+        echo "musicsshare user@host"
+        echo "example: musicsshare GBurdell@gatech.edu"
 else
     echo  "Enter the remote user's password."
     ssh -N $1 -L 3690:localhost:3389 -f || exit 1
